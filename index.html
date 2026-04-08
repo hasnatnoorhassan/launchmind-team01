@@ -1,109 +1,96 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FoodConnect - Sustainable Appetites</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 50px 0;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 40px;
-    }
-    header p {
-      font-size: 18px;
-    }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .feature {
-      flex: 1;
-      min-width: 250px;
-      padding: 20px;
-      box-sizing: border-box;
-      border: 1px solid #ddd;
-      margin: 10px;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-    }
-    .feature h3 {
-      margin-top: 0;
-      color: #4CAF50;
-    }
-    .cta {
-      text-align: center;
-      margin: 40px 0;
-    }
-    .cta button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .cta button:hover {
-      background-color: #45a049;
-    }
-    @media(max-width: 768px) {
-      .features {
-        flex-direction: column;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoEats: Smarter Dining, Sustainable Choices</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #28a745;
+            color: #fff;
+            padding: 1.5em 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .feature {
+            flex: 0 0 45%;
+            background: #fff;
+            margin: 1em;
+            padding: 1.5em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .cta {
+            background-color: #ffdd57;
+            color: #333;
+            padding: 1em 2em;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1.5em;
+        }
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                flex: 0 0 80%;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <header>
-    <h1>FoodConnect</h1>
-    <p>Save Money. Save Food. Save the Planet.</p>
-  </header>
-  
-  <section class="features">
-    <div class="feature">
-      <h3>Geolocation-based Meal Browsing</h3>
-      <p>Allows users to browse meals available near their location with adjustable radius filters.</p>
-    </div>
-    <div class="feature">
-      <h3>Real-time Updates on Food Availability</h3>
-      <p>Provides current listings of surplus food items with instant updates on availability.</p>
-    </div>
-    <div class="feature">
-      <h3>Secure In-app Payment</h3>
-      <p>Enables users to seamlessly pay for meals directly through the app using secure payment methods.</p>
-    </div>
-    <div class="feature">
-      <h3>Anonymous Restaurant Listing</h3>
-      <p>Ensures that users see only food details including quantity and price without restaurant branding.</p>
-    </div>
-    <div class="feature">
-      <h3>Order History and Preferences</h3>
-      <p>Allows users to view past orders and set preferences to enhance future browsing experiences.</p>
-    </div>
-  </section>
+<header>
+    <h1>EcoEats: Smarter Dining, Sustainable Choices</h1>
+    <p>Your gateway to reducing food waste and dining on a budget.</p>
+</header>
 
-  <div class="cta">
-    <button>Start Saving with FoodConnect!</button>
-  </div>
+<div class="container">
+    <h2>Features</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>Location-Based Food Browsing</h3>
+            <p>Allows customers to browse available meals based on their geographic location and customize the search by price range.</p>
+        </div>
+        <div class="feature">
+            <h3>Secure In-App Payment System</h3>
+            <p>Enables a seamless and secure payment process directly within the app, supporting multiple payment methods.</p>
+        </div>
+        <div class="feature">
+            <h3>Real-time Availability Updates</h3>
+            <p>Restaurants can update the availability of surplus food items in real-time, ensuring customers have the most current offerings.</p>
+        </div>
+        <div class="feature">
+            <h3>Regular Deal Notifications</h3>
+            <p>Sends personalized notifications to users about new and expiring deals based on their location and dietary preferences.</p>
+        </div>
+        <div class="feature">
+            <h3>Review System</h3>
+            <p>Collects anonymous reviews and ratings for each completed order, aiding in transparency and quality control without revealing restaurant names.</p>
+        </div>
+    </div>
+    <a href="#" class="cta">Download the App Today!</a>
 </div>
 
 </body>
