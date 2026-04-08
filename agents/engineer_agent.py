@@ -212,9 +212,14 @@ def run():
             "pr_url": pr_url,
             "issue_url": issue_url,
             "branch_name": branch_name,
+            "html_content": html_content,       
             "html_preview": html_content[:200] + "..."
         },
         parent_message_id=task_msg["message_id"]
     )
 
-    return {"pr_url": pr_url, "issue_url": issue_url}
+    return {
+        "pr_url": pr_url,
+        "issue_url": issue_url,
+        "html_content": html_content             
+    }
