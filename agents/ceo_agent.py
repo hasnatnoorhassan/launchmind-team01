@@ -84,6 +84,65 @@ def review_product_spec(spec):
             raw = raw[4:]
     return json.loads(raw.strip())
 
+def post_final_summary(spec, pr_url, issue_url, tagline):
+    """Post a final summary message to Slack."""
+    payload = {
+        "channel": "#launches",
+        "blocks": [
+            {
+                "type": "header",
+                "text": {
+                    "type": "plain_text",
+                    "text": "📊 CEO Summary — LaunchMind Pipeline Complete"
+                }
+            },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": f"*Startup:* {spec['value_proposition']}\n*Tagline:* _{tagline}_"
+                }
+            },
+            {
+                "type": "section",
+                "fields": [
+                    {
+                        "type": "mrkdwn",
+                        "text": f"*PR:* <{pr_url}|View Pull Request>"
+                    },
+                    {
+                        "type": "mrkdwn",
+                        "text": f"*Issue:* <{issue_url}|View Issue>"
+                    }
+                ]
+            },
+            {
+                "type": "context",
+                "elements": [
+                    {
+                        "type": "mrkdwn",
+                        "text": "All agents completed successfully ✅ | Posted by CEO Agent 🤖"
+                    }
+                ]
+            }
+        ]
+    }
+
+    import requests
+    r = requests.post(
+        "https://slack.com/api/chat.postMessage",
+        headers={
+            "Authorization": f"Bearer {os.getenv('SLACK_BOT_TOKEN')}",
+            "Content-Type": "application/json"
+        },
+        json=payload
+    )
+
+    if r.json().get("ok"):
+        print("   ✅ CEO final summary posted to Slack")
+    else:
+        print(f"   ❌ Slack error: {r.json().get('error')}")
+
 
 def run(startup_idea):
     print(f"\n🚀 CEO AGENT STARTED")
