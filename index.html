@@ -2,115 +2,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainable Dining App</title>
+    <title>Surplus Eats</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #f4f4f9;
             color: #333;
-            max-width: 100%;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
+            line-height: 1.6;
         }
         header {
-            background: #81c784;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #00796b 3px solid;
+            background: #00796b;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
         }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        #branding {
-            float: left;
-        }
-        #branding h1 {
-            margin: 0;
-        }
-        .cta {
-            margin: 20px 0;
-            padding: 10px 20px;
-            background-color: #00796b;
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            border-radius: 5px;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
         }
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            gap: 15px;
         }
         .feature {
-            background: #fff;
-            margin: 20px 0;
-            border: 1px solid #ddd;
+            flex: 1 1 calc(33% - 30px);
+            background: #ffffff;
             padding: 20px;
             border-radius: 5px;
-            flex: 1;
-            margin-right: 20px;
-            box-shadow: 0 0 7px #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .cta {
+            background: #f50057;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+       . text-center {
+            text-align: center;
         }
         @media(max-width: 768px) {
             .features {
-                display: block;
+                flex-direction: column;
+            }
+            .feature {
+                flex: 1 1 100%;
             }
         }
     </style>
 </head>
 <body>
-
     <header>
         <div class="container">
-            <div id="branding">
-                <h1>Savory Surplus</h1>
-            </div>
+            <h1>Welcome to Surplus Eats</h1>
+            <p>Your gateway to affordable meals and a sustainable future. Purchase surplus food at amazing discounts!</p>
         </div>
     </header>
-
-    <section id="showcase">
-        <div class="container">
-            <h2>A gourmet experience without the waste or the cost</h2>
-            <p>Discover eco-friendly dining deals and save money while supporting sustainability.</p>
-            <a href="#features" class="cta">Explore Features</a>
-        </div>
-    </section>
-
-    <section id="features" class="container">
-        <h2>Key Features</h2>
-        <div class="features">
-            <div class="feature">
-                <h3>Location-Based Meal Browsing</h3>
-                <p>Browse available surplus meals based on your current location using GPS technology. </p>
+    <main class="container">
+        <section>
+            <h2 class="text-center">Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Real-Time Meal Updates</h3>
+                    <p>Allows restaurants to update available meals in real time as inventory changes.</p>
+                </div>
+                <div class="feature">
+                    <h3>Seamless Order and Payment Processing</h3>
+                    <p>Enables customers to browse, select, and pay for meals directly through the app.</p>
+                </div>
+                <div class="feature">
+                    <h3>Meal Rating System</h3>
+                    <p>Provides customers the ability to rate and review their meal experience after purchase.</p>
+                </div>
+                <div class="feature">
+                    <h3>Dietary Restriction Filters</h3>
+                    <p>Allows users to filter available meals based on their dietary needs such as vegan, gluten-free, etc.</p>
+                </div>
+                <div class="feature">
+                    <h3>Anonymous Restaurant Listings</h3>
+                    <p>Prevents customer bias by hiding restaurant names, focusing only on food details, quantity, and price.</p>
+                </div>
             </div>
-            <div class="feature">
-                <h3>Payment Integration</h3>
-                <p>Secure your orders directly through the app with multiple payment options like credit cards and digital wallets.</p>
-            </div>
-            <div class="feature">
-                <h3>Real-Time Updates</h3>
-                <p>Receive instantaneous updates from restaurants on meal status and availability.</p>
-            </div>
-            <div class="feature">
-                <h3>Anonymous Listings</h3>
-                <p>Focus on meals, not brands, with listings that prioritize food and pricing over restaurant names.</p>
-            </div>
-            <div class="feature">
-                <h3>Delivery Service Coordination</h3>
-                <p>Enjoy seamless logistics coordination with major delivery services to your doorstep.</p>
-            </div>
-        </div>
-    </section>
-
+        </section>
+        <section class="text-center">
+            <a class="cta" href="#">Download App Now</a>
+        </section>
+    </main>
 </body>
 </html>
