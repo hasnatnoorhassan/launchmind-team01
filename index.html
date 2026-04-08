@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusTutor - Connecting Students with Local Tutors</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header h2 {
+            margin: 0.5em 0;
+            font-weight: normal;
+            color: #cddc39;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 2em 0;
+        }
+        .feature {
+            background: #f4f4f4;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 5px;
+            flex-basis: 45%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .feature h3 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        .cta {
+            text-align: center;
+            margin: 3em 0;
+        }
+        .cta button {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .cta button:hover {
+            background: #45a049;
+        }
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                flex-basis: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>CampusTutor</h1>
+        <h2>An app connecting university students with local tutors</h2>
+    </header>
+
+    <div class="features">
+        <div class="feature">
+            <h3>Tutor Search</h3>
+            <p>Browse verified tutors by subject</p>
+        </div>
+        <div class="feature">
+            <h3>Session Booking</h3>
+            <p>Book and pay for sessions in-app</p>
+        </div>
+        <div class="feature">
+            <h3>Reviews</h3>
+            <p>Rate tutors after sessions</p>
+        </div>
+        <div class="feature">
+            <h3>Chat</h3>
+            <p>Message tutors before booking</p>
+        </div>
+        <div class="feature">
+            <h3>Schedule</h3>
+            <p>View upcoming sessions</p>
+        </div>
+    </div>
+
+    <div class="cta">
+        <button>Get Started</button>
+    </div>
+</div>
+
+</body>
+</html>
