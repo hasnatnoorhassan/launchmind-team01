@@ -106,9 +106,9 @@ launchmind-team01/
 
 | Member | Agent Ownership |
 |---|---|
-| Member 1 | CEO Agent |
-| Member 2 | Product Agent, Engineer Agent |
-| Member 3 | Marketing Agent, QA Agent |
+| 22I2049 HASNAT NOOR HASSAN | CEO Agent |
+| 22I1974 HAMZA ZAHID | Product Agent, Engineer Agent |
+| 22I2009 TAHA RASHEED | Marketing Agent, QA Agent |
 
 ---
 
