@@ -2,59 +2,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoEats: Smarter Dining, Sustainable Choices</title>
+    <title>MealSteal - Sustainable Dining</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            color: #f0f0f0;
+            background-color: #1b1b1b;
         }
         header {
-            background: #28a745;
-            color: #fff;
-            padding: 1.5em 0;
+            position: sticky;
+            top: 0;
+            background-color: #2b2b2b;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        header h1 {
+            margin: 0;
+            color: #ffa500;
+        }
+        header .cta {
+            background-color: #ff4500;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        header .cta:hover {
+            background-color: #e04000;
+        }
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 30px;
             text-align: center;
         }
-        .container {
-            max-width: 1200px;
-            margin: 2em auto;
-            padding: 1em;
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+            margin-bottom: 20px;
+            color: #ffa500;
         }
-        h1, h2, h3 {
-            margin-top: 0;
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
         }
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .feature {
-            flex: 0 0 45%;
-            background: #fff;
-            margin: 1em;
-            padding: 1.5em;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .cta {
-            background-color: #ffdd57;
-            color: #333;
-            padding: 1em 2em;
-            text-decoration: none;
-            border-radius: 5px;
+        .hero .cta {
+            margin: 5px;
             display: inline-block;
-            margin-top: 1.5em;
+        }
+        .features, .how-it-works, .testimonials, footer {
+            padding: 50px 30px;
+            text-align: center;
+        }
+        .features img, .how-it-works img, .testimonials img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .cards .card {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 250px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
         @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
+            .hero h2 {
+                font-size: 2em;
             }
-            .feature {
-                flex: 0 0 80%;
+            .hero p {
+                font-size: 1em;
+            }
+            .cards .card {
+                max-width: none;
+                width: 100%;
             }
         }
     </style>
@@ -62,36 +99,81 @@
 <body>
 
 <header>
-    <h1>EcoEats: Smarter Dining, Sustainable Choices</h1>
-    <p>Your gateway to reducing food waste and dining on a budget.</p>
+    <h1>MealSteal</h1>
+    <button class="cta">Get the App</button>
 </header>
 
-<div class="container">
+<section class="hero">
+    <h2>Eat Great, Spend Less, Waste Less</h2>
+    <p>A mobile app for eco-conscious and cost-conscious diners to purchase surplus end-of-day meals from local restaurants at discounted prices.</p>
+    <button class="cta">Download Now</button>
+    <button class="cta">Learn More</button>
+</section>
+
+<section class="features">
     <h2>Features</h2>
-    <div class="features">
-        <div class="feature">
-            <h3>Location-Based Food Browsing</h3>
-            <p>Allows customers to browse available meals based on their geographic location and customize the search by price range.</p>
+    <div class="cards">
+        <div class="card">
+            <div class="icon">📍</div>
+            <h3>Geo-Location Based Meal Browsing</h3>
+            <p>Allows users to view available surplus meals based on their current location.</p>
         </div>
-        <div class="feature">
-            <h3>Secure In-App Payment System</h3>
-            <p>Enables a seamless and secure payment process directly within the app, supporting multiple payment methods.</p>
+        <div class="card">
+            <div class="icon">📅</div>
+            <h3>Real-Time Inventory Updates</h3>
+            <p>Enables restaurants to update the availability of surplus food in real time.</p>
         </div>
-        <div class="feature">
-            <h3>Real-time Availability Updates</h3>
-            <p>Restaurants can update the availability of surplus food items in real-time, ensuring customers have the most current offerings.</p>
-        </div>
-        <div class="feature">
-            <h3>Regular Deal Notifications</h3>
-            <p>Sends personalized notifications to users about new and expiring deals based on their location and dietary preferences.</p>
-        </div>
-        <div class="feature">
-            <h3>Review System</h3>
-            <p>Collects anonymous reviews and ratings for each completed order, aiding in transparency and quality control without revealing restaurant names.</p>
+        <div class="card">
+            <div class="icon">🔒</div>
+            <h3>Secure Payment Processing</h3>
+            <p>Provides a secure and seamless payment experience for users directly through the app.</p>
         </div>
     </div>
-    <a href="#" class="cta">Download the App Today!</a>
-</div>
+</section>
+
+<section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=800" alt="Step 1">
+            <h3>1. Search</h3>
+            <p>Find discounted end-of-day meals near you.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Step 2">
+            <h3>2. Select</h3>
+            <p>Choose your favorite surplus meal.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400" alt="Step 3">
+            <h3>3. Purchase</h3>
+            <p>Complete your purchase securely through the app.</p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="cards">
+        <div class="card">
+            <p>"MealSteal is a lifesaver! I can enjoy delicious meals without hurting my wallet."</p>
+            <cite>- Tom, Cost-Conscious Diner</cite>
+        </div>
+        <div class="card">
+            <p>"Finally, an easy way to help the environment! MealSteal makes it simple to reduce food waste."</p>
+            <cite>- Sara, Eco-Conscious Consumer</cite>
+        </div>
+        <div class="card">
+            <p>"Convenient and fast! MealSteal fits perfectly into my busy schedule with amazing deals."</p>
+            <cite>- Raj, Busy Professional</cite>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h2>MealSteal</h2>
+    <p>Eat Great, Spend Less, Waste Less</p>
+</footer>
 
 </body>
 </html>
