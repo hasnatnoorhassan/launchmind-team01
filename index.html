@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,164 +10,202 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            color: #f0f0f0;
-            background-color: #1b1b1b;
+            color: #fff;
+            background-color: #1a1a1a;
+            overflow-x: hidden;
         }
-        .navbar {
+
+        header {
             position: sticky;
             top: 0;
+            background-color: #292929;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
-            padding: 1rem 2rem;
-            background-color: #292929;
+            align-items: center;
             z-index: 1000;
         }
-        .navbar .brand {
-            font-size: 1.5rem;
+
+        header .brand {
+            font-size: 1.5em;
             font-weight: 600;
         }
-        .cta-button {
-            background-color: #ff7b54;
+
+        header .cta-btn {
+            background-color: #e76f51;
+            color: #fff;
+            padding: 10px 15px;
             border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        .cta-button:hover {
-            background-color: #e0663b;
+
+        header .cta-btn:hover {
+            background-color: #f4a261;
         }
+
         .hero {
-            height: 90vh;
             background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400');
             background-size: cover;
             background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 100px 20px;
             text-align: center;
-            color: #fff;
-            padding: 0 2rem;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        .features {
-            display: flex;
-            justify-content: space-between;
-            padding: 2rem;
-            background-color: #252525;
-        }
-        .feature-card {
-            flex: 1;
-            max-width: 30%;
-            background-color: #333;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 0 0.5rem;
-        }
-        .feature-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .feature-card h3 {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-        }
-        .how-it-works {
-            padding: 2rem;
-            background-color: #1b1b1b;
-            text-align: center;
-        }
-        .how-it-works h2 {
-            margin-bottom: 1rem;
-        }
-        .how-it-works div {
-            margin-top: 1rem;
-            font-size: 1.1rem;
-        }
-        .testimonials {
-            padding: 2rem;
-            background-color: #292929;
-            text-align: center;
-        }
-        .testimonial {
-            max-width: 500px;
-            margin: 1rem auto;
-            padding: 1rem;
-            background-color: #333;
-            border-radius: 10px;
         }
 
-        .footer {
-            padding: 1rem;
-            background-color: #1b1b1b;
-            text-align: center;
-            color: #bbb;
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+            margin-bottom: 20px;
         }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .hero .cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cta-btns button {
+            font-size: 1em;
+        }
+
+        .features, .how-it-works, .testimonials {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features .feature-card, .how-it-works .step, .testimonials .testimonial {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: inline-block;
+            width: calc(33% - 40px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .features .feature-card i, .how-it-works .step i {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .features .feature-card:hover, .how-it-works .step:hover, .testimonials .testimonial:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonials .quote {
+            font-style: italic;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #292929;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .brand {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
+            .features .feature-card, .how-it-works .step, .testimonials .testimonial {
+                width: calc(50% - 40px);
             }
-            .feature-card {
-                max-width: 80%;
-                margin: 1rem 0;
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="navbar">
+    <header>
         <div class="brand">MealSteal</div>
-        <button class="cta-button">Download App</button>
+        <button class="cta-btn">Download App</button>
+    </header>
+
+    <header>
+        <div class="brand">MealSteal</div>
+        <button class="cta-btn">Try Now</button>
+    </header>
+
+    <div class="hero">
+        <h1>Discover Affordable Gourmet Meals</h1>
+        <p>Experience budget-friendly and eco-friendly dining with MealSteal.</p>
+        <div class="cta-btns">
+            <button class="cta-btn">Discover Deals</button>
+            <button class="cta-btn">For Restaurants</button>
+        </div>
     </div>
-    <section class="hero">
-        <h1>Your Gateway to Great Savings and Sustainability</h1>
-        <p>Join MealSteal - Connect with local restaurants offering discounted surplus meals.</p>
-        <button class="cta-button">Explore Meals</button>
-        <button class="cta-button">How It Works</button>
-    </section>
+
     <section class="features">
+        <h2>Features</h2>
         <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Dish Image">
-            <h3>🍽️ Location-based Meal Browsing</h3>
-            <p>Browse available discounted meals based on your location.</p>
+            <i>📍</i>
+            <h3>Location-Based Browsing</h3>
+            <p>Find nearby surplus meals effortlessly.</p>
         </div>
         <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400" alt="Dish Image">
-            <h3>🙈 Anonymous Listings</h3>
-            <p>See meal details without knowing the restaurant name to promote fairness and sustainability.</p>
+            <i>🔒</i>
+            <h3>Secure Payment System</h3>
+            <p>Enjoy seamless and secure transactions.</p>
         </div>
         <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400" alt="Dish Image">
-            <h3>💳 Secure Payment Integration</h3>
-            <p>Pay directly through the app using various secure payment methods.</p>
+            <i>⏰</i>
+            <h3>Real-Time Meal Updates</h3>
+            <p>Stay updated with live meal availability.</p>
         </div>
     </section>
+
     <section class="how-it-works">
-        <h2>How It Works</h2>
-        <div>1. Find Deals: Browse through curated meal deals near you.</div>
-        <div>2. Book & Pay: Reserve your meal and pay seamlessly through the app.</div>
-        <div>3. Pickup & Enjoy: Collect your meal at the restaurant and savor your savings.</div>
+        <h2>How it Works</h2>
+        <div class="step">
+            <i>1️⃣</i>
+            <h3>Browse</h3>
+            <p>Search for meals near you at a discount.</p>
+        </div>
+        <div class="step">
+            <i>2️⃣</i>
+            <h3>Select</h3>
+            <p>Choose your meal with full transparency.</p>
+        </div>
+        <div class="step">
+            <i>3️⃣</i>
+            <h3>Purchase</h3>
+            <p>Securely complete your purchase.</p>
+        </div>
     </section>
+
     <section class="testimonials">
         <h2>What Our Users Say</h2>
         <div class="testimonial">
-            <p>"MealSteal has transformed the way I dine out. The deals are unbeatable!" - Alex T.</p>
+            <p class="quote">"I found amazing meals at prices I never imagined. MealSteal truly changed my foodie life!"
+            </p>
+            <p>- Sam, Budget-Conscious Foodie</p>
         </div>
         <div class="testimonial">
-            <p>"A perfect solution for someone conscious about food waste and budget." - Jamie L.</p>
+            <p class="quote">"I love how MealSteal helps me support sustainable dining and reduce food waste!"
+            </p>
+            <p>- Alex, Sustainable-Minded Consumer</p>
         </div>
     </section>
-    <div class="footer">
-        <div>MealSteal - Connecting people with surplus meals</div>
-    </div>
+
+    <footer>
+        <div class="brand">MealSteal</div>
+        <p>Access discounted meals without brand bias.</p>
+    </footer>
 </body>
+
 </html>
