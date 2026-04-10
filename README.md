@@ -162,5 +162,5 @@ as they are sent and received. The complete message history is printed at the en
 ## Deliverables
 
 - **GitHub Pull Request (Engineer Agent):** https://github.com/hasnatnoorhassan/launchmind-team01/pull/3
-- **Slack Workspace Invite:** [Insert invite link]
+- **Slack Workspace Invite:** https://join.slack.com/t/launchmindworld/shared_invite/zt-3uojfhk44-2GfYpDRowz4ptV6y7u4Vqw
 - **Demo Video:** [Insert video link]
