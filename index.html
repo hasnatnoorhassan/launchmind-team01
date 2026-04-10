@@ -2,109 +2,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MealSteal - Sustainable Dining</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>MealSteal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; background: #121212; color: #fff; }
-        .navbar { position: sticky; top: 0; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: space-between; padding: 20px 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
-        .navbar .brand { font-size: 1.5em; font-weight: 600; }
-        .navbar .cta { padding: 10px 20px; background: #ff7043; border: none; border-radius: 5px; color: #fff; cursor: pointer; transition: background 0.3s; }
-        .navbar .cta:hover { background: #ff5722; }
-        .hero { background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400') center/cover no-repeat; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; }
-        .hero h1 { font-size: 3em; margin: 0; }
-        .hero p { margin: 20px 0 40px; font-size: 1.2em; }
-        .hero .btn { margin: 10px; padding: 15px 30px; background: #ff7043; border: none; border-radius: 5px; color: #fff; font-size: 1em; cursor: pointer; transition: background 0.3s; }
-        .hero .btn:hover { background: #ff5722; }
-        .features, .how-it-works, .testimonials { padding: 60px 20px; text-align: center; }
-        .features h2, .how-it-works h2, .testimonials h2 { font-size: 2.5em; margin-bottom: 20px; }
-        .feature-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;}
-        .feature-card { flex: 1; min-width: 250px; max-width: 300px; background: #1e1e1e; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: transform 0.3s; }
-        .feature-card:hover { transform: translateY(-10px); }
-        .feature-card img { width: 100%; border-radius: 10px; }
-        .feature-card h3 { font-size: 1.5em; margin: 15px 0; }
-        .feature-card p { font-size: 1em; }
-        .number-steps { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;}
-        .step { flex: 1; min-width: 250px; max-width: 300px; background: #1e1e1e; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
-        .step .number { font-size: 2em; background: #ff7043; padding: 10px; border-radius: 50%; }
-        .step h3 { margin: 15px 0; }
-        .testimonials .testimonial { max-width: 600px; margin: 20px auto; background: #1e1e1e; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); font-style: italic; }
-        footer { background: #000; color: #ff7043; padding: 20px; text-align: center; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+            background-color: #1b1b1b;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: #292929;
+            z-index: 1000;
+        }
+        .navbar .brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .cta-button {
+            background-color: #ff7b54;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #e0663b;
+        }
+        .hero {
+            height: 90vh;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 2rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            background-color: #252525;
+        }
+        .feature-card {
+            flex: 1;
+            max-width: 30%;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 0 0.5rem;
+        }
+        .feature-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+        .how-it-works {
+            padding: 2rem;
+            background-color: #1b1b1b;
+            text-align: center;
+        }
+        .how-it-works h2 {
+            margin-bottom: 1rem;
+        }
+        .how-it-works div {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+        .testimonials {
+            padding: 2rem;
+            background-color: #292929;
+            text-align: center;
+        }
+        .testimonial {
+            max-width: 500px;
+            margin: 1rem auto;
+            padding: 1rem;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .footer {
+            padding: 1rem;
+            background-color: #1b1b1b;
+            text-align: center;
+            color: #bbb;
+        }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2em; }
-            .hero p { font-size: 1em; }
-            .number-steps { flex-direction: column; align-items: center; }
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature-card {
+                max-width: 80%;
+                margin: 1rem 0;
+            }
         }
     </style>
 </head>
 <body>
-
-    <nav class="navbar">
+    <div class="navbar">
         <div class="brand">MealSteal</div>
-        <button class="cta">Get the App</button>
-    </nav>
-
-    <header class="hero">
-        <h1>Sustainability Starts With You</h1>
-        <p>A mobile app for eco-conscious, budget-conscious, and busy professionals to enjoy surplus meals at savings</p>
-        <button class="btn">Download Now</button>
-        <button class="btn">Learn More</button>
-    </header>
-
+        <button class="cta-button">Download App</button>
+    </div>
+    <section class="hero">
+        <h1>Your Gateway to Great Savings and Sustainability</h1>
+        <p>Join MealSteal - Connect with local restaurants offering discounted surplus meals.</p>
+        <button class="cta-button">Explore Meals</button>
+        <button class="cta-button">How It Works</button>
+    </section>
     <section class="features">
-        <h2>Our Features</h2>
-        <div class="feature-cards">
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=800" alt="Real-time Listing">
-                <h3>Real-time Food Listing 🍽️</h3>
-                <p>Instant updates on available surplus meals for timely pick-up.</p>
-            </div>
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Location-based Browsing">
-                <h3>Location-based Browsing 📍</h3>
-                <p>Find delicious deals based on your current location or destination.</p>
-            </div>
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400" alt="Secure Payments">
-                <h3>Secure Payment 💳</h3>
-                <p>Easy and secure payment options for your convenience.</p>
-            </div>
+        <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Dish Image">
+            <h3>🍽️ Location-based Meal Browsing</h3>
+            <p>Browse available discounted meals based on your location.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400" alt="Dish Image">
+            <h3>🙈 Anonymous Listings</h3>
+            <p>See meal details without knowing the restaurant name to promote fairness and sustainability.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400" alt="Dish Image">
+            <h3>💳 Secure Payment Integration</h3>
+            <p>Pay directly through the app using various secure payment methods.</p>
         </div>
     </section>
-
     <section class="how-it-works">
         <h2>How It Works</h2>
-        <div class="number-steps">
-            <div class="step">
-                <div class="number">1</div>
-                <h3>Browse Meals</h3>
-                <p>Discover surplus meals from nearby restaurants.</p>
-            </div>
-            <div class="step">
-                <div class="number">2</div>
-                <h3>Order & Pay</h3>
-                <p>Choose your meal and pay securely through the app.</p>
-            </div>
-            <div class="step">
-                <div class="number">3</div>
-                <h3>Pick Up or Deliver</h3>
-                <p>Pick up at the designated location or get it delivered.</p>
-            </div>
-        </div>
+        <div>1. Find Deals: Browse through curated meal deals near you.</div>
+        <div>2. Book & Pay: Reserve your meal and pay seamlessly through the app.</div>
+        <div>3. Pickup & Enjoy: Collect your meal at the restaurant and savor your savings.</div>
     </section>
-
     <section class="testimonials">
-        <h2>Testimonials</h2>
+        <h2>What Our Users Say</h2>
         <div class="testimonial">
-            "MealSteal has changed how I dine out, offering eco-friendly meal options that save money and satisfy my ecological concerns." - Alice, Eco-conscious Diner
+            <p>"MealSteal has transformed the way I dine out. The deals are unbeatable!" - Alex T.</p>
         </div>
         <div class="testimonial">
-            "A lifesaver for my budget! I find great deals on meals that fit my tight budget constraints." - Bob, Budget Diner
+            <p>"A perfect solution for someone conscious about food waste and budget." - Jamie L.</p>
         </div>
     </section>
-
-    <footer>
-        <p>MealSteal - Dining Sustainably, Living Conscientiously</p>
-    </footer>
-
+    <div class="footer">
+        <div>MealSteal - Connecting people with surplus meals</div>
+    </div>
 </body>
 </html>
