@@ -2,59 +2,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SavorySurplus - Sustainable & Affordable Meals</title>
+    <title>Surplus Savvy</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7; color: #333; }
-        .container { width: 80%; margin: 0 auto; padding: 20px; }
-        header { background-color: #2ecc71; padding: 20px 0; }
-        header h1 { color: #fff; }
-        header p { color: #dff6e5; }
-        section { margin: 40px 0; }
-        .features { display: flex; flex-wrap: wrap; }
-        .feature { flex: 1; padding: 10px; min-width: 250px; box-sizing: border-box; }
-        .cta { text-align: center; margin: 40px 0; }
-        .cta a { display: inline-block; background-color: #2ecc71; color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
-        .cta a:hover { background-color: #27ae60; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+        }
+        .feature-item {
+            width: 100%;
+            max-width: 300px;
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .feature-item h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+        .feature-item p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        .cta {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .cta button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cta button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Experience Affordable Sustainability</h1>
-            <p>Your pathway to saving money and the planet.</p>
-        </div>
+        <h1>Discover Discounted Meals Near You</h1>
+        <p>Join the movement towards sustainable eating while saving money with Surplus Savvy.</p>
     </header>
-    <section class="container">
-        <h2>Meet SavorySurplus</h2>
-        <p>An innovative mobile app connecting like-minded consumers with delicious surplus meals from local restaurants, all at discounted prices. Perfect for those who value their wallet and the environment.</p>
-    </section>
-    <section class="container">
-        <h2>Features</h2>
-        <div class="features">
-            <div class="feature">
-                <h3>Real-Time Food Listing</h3>
-                <p>Allows restaurants to list surplus food items as they become available and update in real time.</p>
-            </div>
-            <div class="feature">
-                <h3>Location and Price Filtering</h3>
-                <p>Enables users to filter meals based on their current location and desired price range.</p>
-            </div>
-            <div class="feature">
-                <h3>Integrated Payment Gateway</h3>
-                <p>Provides users with a seamless and secure payment process within the app.</p>
-            </div>
-            <div class="feature">
-                <h3>Anonymous Browsing</h3>
-                <p>Displays only meal details, quantity, and price without revealing restaurant names, encouraging unbiased sustainable choices.</p>
-            </div>
-            <div class="feature">
-                <h3>Push Notifications</h3>
-                <p>Notifies users when new deals are available based on their location or preferences.</p>
-            </div>
+    
+    <section class="features">
+        <div class="feature-item">
+            <h2>Location-Based Search</h2>
+            <p>Browse available surplus food options nearby based on your current location.</p>
+        </div>
+        <div class="feature-item">
+            <h2>Real-Time Availability Updates</h2>
+            <p>Stay informed as restaurants update food listings and availability throughout the day.</p>
+        </div>
+        <div class="feature-item">
+            <h2>In-App Payment System</h2>
+            <p>Securely pay for your food orders directly through the app, hassle-free.</p>
+        </div>
+        <div class="feature-item">
+            <h2>Anonymous Restaurant Listings</h2>
+            <p>Focus on sustainable choices with anonymous food listings that emphasize details and pricing.</p>
+        </div>
+        <div class="feature-item">
+            <h2>Discounted Pricing</h2>
+            <p>Enjoy meals at discounted rates designed to attract cost-conscious customers.</p>
         </div>
     </section>
-    <section class="cta">
-        <a href="#download">Download the App Now</a>
-    </section>
+
+    <div class="cta">
+        <button>Download the App Now</button>
+    </div>
 </body>
 </html>
